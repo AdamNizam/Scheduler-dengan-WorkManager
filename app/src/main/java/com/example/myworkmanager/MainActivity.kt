@@ -73,6 +73,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             .build()
         val constraints = Constraints.Builder()
             .setRequiredNetworkType(NetworkType.CONNECTED)
+            //charging
+//            .setRequiresCharging(true)
             .build()
         periodicWorkRequest = PeriodicWorkRequest.Builder(MyWorker::class.java, 15, TimeUnit.MINUTES)
             .setInputData(data)
