@@ -10,17 +10,16 @@ import androidx.core.app.NotificationCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.loopj.android.http.AsyncHttpResponseHandler
-import com.loopj.android.http.BuildConfig
 import com.loopj.android.http.SyncHttpClient
 import cz.msebera.android.httpclient.Header
 import org.json.JSONObject
 import java.text.DecimalFormat
 
+
 class MyWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
 
     companion object {
         private val TAG = MyWorker::class.java.simpleName
-        const val APP_ID = "YOUR_KEY_HERE"
         const val EXTRA_CITY = "city"
         const val NOTIFICATION_ID = 1
         const val CHANNEL_ID = "channel_01"
